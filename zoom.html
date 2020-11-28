@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom</title>
+</head>
+<body>
+    
+    <button onclick="zoomTele()">zoomTele</button>
+    <button onclick="zoomWide()">zoomWide</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function zoomTele() {
+            $.get("http://172.20.42.76/cgi-bin/ptz.cgi?action=start&channel=0&code=ZoomTele&arg1=0&arg2=0&arg3=0");
+        }
+
+        function zoomWide() {
+            $.get("http://172.20.42.76/cgi-bin/ptz.cgi?action=start&channel=0&code=ZoomWide&arg1=0&arg2=0&arg3=0");
+        }
+    </script>
+</body>
+</html>
